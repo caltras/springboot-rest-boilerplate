@@ -1,0 +1,23 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.4.RELEASE'
+    id 'java'
+}
+
+
+jar {
+    baseName = 'springboot-rest-boilerplate'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+repositories {
+    jcenter()
+}
+bootRepackage {
+    mainClass = 'com.claudiotraspadini.core.Application'
+}
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.thymeleaf:thymeleaf-spring4")
+    compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
